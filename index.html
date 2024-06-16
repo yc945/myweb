@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #343a40;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #007bff;
+        }
+        section {
+            padding: 2em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .skill, .project {
+            flex: 1 1 calc(33.333% - 1em);
+            background-color: #f8f9fa;
+            padding: 1em;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .skill:hover, .project:hover {
+            transform: translateY(-10px);
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-top: 1em;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 0.5em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+        }
+        .contact-form button {
+            margin-top: 1em;
+            padding: 0.5em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        .blog, .comments {
+            margin-top: 2em;
+        }
+        .blog-post, .comment {
+            background-color: #f8f9fa;
+            padding: 1em;
+            margin-bottom: 1em;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的个人网页</h1>
+    </header>
+    <nav>
+        <a href="#about">个人简介</a>
+        <a href="#experience">工作经历</a>
+        <a href="#education">教育背景</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目展示</a>
+        <a href="#contact">联系方式</a>
+        <a href="#blog">博客</a>
+        <a href="#comments">留言板</a>
+    </nav>
+    <section id="about">
+        <div class="container">
+            <h2>个人简介</h2>
+            <p>这里是个人简介的内容。</p>
+        </div>
+    </section>
+    <section id="experience">
+        <div class="container">
+            <h2>工作经历</h2>
+            <p>这里是工作经历的内容。</p>
+        </div>
+    </section>
+    <section id="education">
+        <div class="container">
+            <h2>教育背景</h2>
+            <p>这里是教育背景的内容。</p>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <h2>技能</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>技能 1</h3>
+                    <p>技能 1 的描述。</p>
+                </div>
+                <div class="skill">
+                    <h3>技能 2</h3>
+                    <p>技能 2 的描述。</p>
+                </div>
+                <div class="skill">
+                    <h3>技能 3</h3>
+                    <p>技能 3 的描述。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <h2>项目展示</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>项目 1</h3>
+                    <img src="https://via.placeholder.com/300" alt="项目 1 图片">
+                    <p>项目 1 的描述。</p>
+                </div>
+                <div class="project">
+                    <h3>项目 2</h3>
+                    <img src="https://via.placeholder.com/300" alt="项目 2 图片">
+                    <p>项目 2 的描述。</p>
+                </div>
+                <div class="project">
+                    <h3>项目 3</h3>
+                    <img src="https://via.placeholder.com/300" alt="项目 3 图片">
+                    <p>项目 3 的描述。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>联系方式</h2>
+            <form class="contact-form">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name">
+                <label for="email">电子邮件</label>
+                <input type="email" id="email" name="email">
+                <label for="message">留言</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                <button type="submit">提交</button>
+            </form>
+        </div>
+    </section>
+    <section id="blog">
+       
+        <div class="container">
+            <h2>博客</h2>
+            <div class="blog">
+                <div class="blog-post">
+                    <h3>博客文章标题 1</h3>
+                    <p>博客文章内容 1。</p>
+                </div>
+                <div class="blog-post">
+                    <h3>博客文章标题 2</h3>
+                    <p>博客文章内容 2。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="comments">
+        <div class="container">
+            <h2>留言板</h2>
+            <div class="comments">
+                <div class="comment">
+                    <p>留言内容 1。</p>
+                </div>
+                <div class="comment">
+                    <p>留言内容 2。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 我的个人网页</p>
+        <p>关注我: 
+            <a href="https://weibo.com" target="_blank">微博</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
